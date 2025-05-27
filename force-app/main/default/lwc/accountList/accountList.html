@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title='Accounts Data'>
+        <template if:true={accounts}>
+            <lightning-datatable key-field='Id' data={accounts} columns={columns} onrowaction={handleRowEvent}>
+            </lightning-datatable>
+        </template>
+        <template if:true={selectedAccountId}>
+            <c-contact-list account-id={selectedAccountId}> </c-contact-list>
+        </template>
+    </lightning-card>
+</template>
